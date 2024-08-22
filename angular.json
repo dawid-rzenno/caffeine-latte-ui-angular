@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/latte",
       "sourceRoot": "projects/latte/src",
-      "prefix": "lib",
+      "prefix": "latte",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
