@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ApplicationComponent } from "latte";
+import { LayoutComponent, LayoutService } from "latte";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    ApplicationComponent
+    LayoutComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'latte-preview';
+  title: string = 'latte-preview';
+
+  constructor(private layoutService: LayoutService) {
+    this.layoutService.applicationName = this.title;
+  }
 }
