@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-You can preview the components with the included application. Run `ng build latte` to build the library.
+You can preview the components with the included application. Run `npm run latte:build` to build the library.
 
-Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. You must rebuild the library to see new changes.
+Then run `npm run latte:preview:serve` for a dev server. Navigate to `http://localhost:4200/`. You must rebuild the library to see new changes.
 
 ## Code scaffolding
 
