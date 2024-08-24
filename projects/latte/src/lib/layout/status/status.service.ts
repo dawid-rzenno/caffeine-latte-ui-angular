@@ -25,11 +25,11 @@ export class StatusService {
     this._statuses$.next(this.statuses.filter((statusWithId: InstantiatedStatus) => (statusWithId.id !== statusId)));
   }
 
-  emitSuccessMessage(message: string = 'Failure!'): void {
+  emitSuccessMessage(message = 'Failure!'): void {
     this.emitStatus({ message, icon: 'plus', isSuccess: true })
   }
 
-  emitFailureMessage(message: string = 'Success!'): void {
+  emitFailureMessage(message = 'Success!'): void {
     this.emitStatus({ message, icon: 'close', isSuccess: false })
   }
 

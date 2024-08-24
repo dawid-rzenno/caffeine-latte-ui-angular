@@ -5,6 +5,11 @@
   "projects": {
     "latte": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/latte",
       "sourceRoot": "projects/latte/src",
       "prefix": "latte",
@@ -38,10 +43,9 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/latte/**/*.spec.ts",
-              "projects/latte/**/*.ts"
-            ],
-            "eslintConfig": ".eslintrc.json"
+              "projects/latte/src/**/*.ts",
+              "projects/latte/src/**/*.html"
+            ]
           }
         }
       }
@@ -114,30 +118,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "projects/latte-preview/tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/latte-preview/public"
-              }
-            ],
-            "styles": [
-              "projects/latte-preview/src/styles.scss"
-            ],
-            "scripts": []
-          }
         }
       }
     }
