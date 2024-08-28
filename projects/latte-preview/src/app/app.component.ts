@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { LayoutComponent, LayoutService } from "latte";
 
 @Component({
-  selector: 'app-root',
+  selector: 'latte-root',
   standalone: true,
   imports: [
     RouterOutlet,
@@ -13,7 +13,7 @@ import { LayoutComponent, LayoutService } from "latte";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title: string = 'latte-preview';
+  title = 'latte-preview';
 
   constructor(private layoutService: LayoutService) {
     this.layoutService.applicationName = this.title;
